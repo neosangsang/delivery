@@ -38,7 +38,7 @@ public class PolicyHandler{
             if (cancelDelivery != null)
                 cancelDelivery.setStatus("Delivery Cancel!");
             deliveryRepository.save(cancelDelivery);
-            System.out.println("##### listener DeliveryCancel : " + orderCanceled.toJson());
+            System.out.println("##### listener DeliveryCancel :  " + orderCanceled.toJson());
         }
     }
 
