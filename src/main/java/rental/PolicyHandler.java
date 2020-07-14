@@ -35,8 +35,8 @@ public class PolicyHandler{
 
         if(orderCanceled.isMe()){
             Delivery cancelDelivery = deliveryRepository.findByOrderId(orderCanceled.getId());
-            if (cancelDelivery != null)
-                cancelDelivery.setStatus("Delivery Cancel!");
+//            if (cancelDelivery != null)
+            cancelDelivery.setStatus("Delivery Cancel!");
             deliveryRepository.save(cancelDelivery);
             System.out.println("##### listener DeliveryCancel :  " + orderCanceled.toJson());
         }
