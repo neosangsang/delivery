@@ -34,7 +34,8 @@ public class PolicyHandler{
     public void wheneverOrderCanceled_DeliveryCancel(@Payload OrderCanceled orderCanceled){
 
         if(orderCanceled.isMe()){
-            Delivery cancelDelivery = deliveryRepository.findByOrderId(orderCanceled.getId());
+            Delivery cancelDelivery = new Delivery();
+ //           Delivery cancelDelivery = deliveryRepository.findByOrderId(orderCanceled.getId());
 //            if (cancelDelivery != null)
             cancelDelivery.setStatus("Delivery Cancel!");
             deliveryRepository.save(cancelDelivery);
